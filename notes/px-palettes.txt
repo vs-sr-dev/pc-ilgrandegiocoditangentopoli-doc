@@ -1,0 +1,36 @@
+RESOURCE.FV1     palette a935bb67aa28   bytes >63: 0 of 768   distinct indices  63   highest 254
+RESOURCE.FV2     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  81   highest 254
+RESOURCE.FV3     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  38   highest 255
+RESOURCE.FV4     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  45   highest 255
+RESOURCE.FV5     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  42   highest 184
+RESOURCE.FV6     palette 76b4bdadc8f9   bytes >63: 0 of 768   distinct indices   4   highest  22
+RESOURCE.FV7     palette 76b4bdadc8f9   bytes >63: 0 of 768   distinct indices  28   highest 235
+RESOURCE.FV8     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  16   highest 120
+RESOURCE.FV9     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices   3   highest  22
+RESOURCE.FVA     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  18   highest 208
+RESOURCE.FVB     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices   3   highest  22
+RESOURCE.FVC     palette 76b4bdadc8f9   bytes >63: 0 of 768   distinct indices   4   highest  22
+RESOURCE.FVD     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  68   highest 243
+RESOURCE.FVE     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  32   highest 220
+RESOURCE.FVF     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  37   highest 254
+RESOURCE.FVG     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  55   highest 254
+RESOURCE.FVH     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  34   highest 237
+RESOURCE.FVI     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  19   highest 254
+RESOURCE.FVJ     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  32   highest 255
+RESOURCE.FVK     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  31   highest 254
+RESOURCE.FVL     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  40   highest 255
+RESOURCE.FVM     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  30   highest 254
+RESOURCE.FVN     palette 641be8e1d158   bytes >63: 0 of 768   distinct indices  14   highest 254
+
+opened                                   : 23 of 23
+decoded with residue 0                   : 23 of 23
+palette is the canonical EGA 16, in order: 23 of 23
+palette is six-bit throughout            : 23 of 23
+geometry   : 320x200 x23
+residues   : +0 x23
+preambles  : 1 distinct
+             f7 00 00 00 00 00 40 01 c8 00  x23   as words [247, 0, 0, 320, 200]
+palettes   : 3 distinct
+             641be8e1d158  x19
+             76b4bdadc8f9  x3
+             a935bb67aa28  x1

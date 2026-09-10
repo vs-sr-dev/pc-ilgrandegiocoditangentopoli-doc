@@ -1,0 +1,15 @@
+shell calls seen by the hook : 101
+  allowed                    : 98
+  REFUSED as rule-0          : 3
+      inline program         1
+      heredoc                1
+      in-place edit script   1
+
+the refusals, in order:
+  2026-09-10T11:25:06  inline program python -c "print('this should be refused by rule 0')"
+  2026-09-10T11:41:50  heredoc        python - <<'EOF'\nprint("x")\nEOF
+  2026-09-10T12:04:24  in-place edit script python - --x 2>/dev/null; sed -i "s/    ('exepack.py', \['--selftest'\], 'the EXEPACK positional test'),//" /dev/null 2>
+
+A rule 0 violation that reaches the shell is a hook failure.
+A rule 0 violation that is REFUSED is the hook working, and the
+count of refusals is how many times the habit still fired.

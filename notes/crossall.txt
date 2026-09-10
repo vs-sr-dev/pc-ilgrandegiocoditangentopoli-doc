@@ -1,0 +1,60 @@
+my distinct sha1            : 26
+  (identical files inside one object collapse into one key here;
+   the file count is the tree census's, not this tool's)
+empty-file sha1 among mine  : no
+collection root             : ..
+skipping                    : pc-ilgrandegiocoditangentopoli-doc
+
+repositories swept          : 108
+list files swept            : 481
+hash tokens read            : 173158
+distinct sha1 in those lists: (counted below)
+
+========================================================================
+EMPTY-FILE SHA1 (the trap): 58 occurrences in 17 repositories
+   dc-dinocrisis-doc                        x4
+   pc-allodsonline-doc                      x2
+   pc-bloodandlace-doc                      x1
+   pc-brokensword4-doc                      x1
+   pc-canediterracotta-doc                  x1
+   pc-capcombeatemupbundle-doc              x1
+   pc-clic11-doc                            x9
+   pc-deadlypremonitiondc-doc               x3
+   pc-hugoshouseofhorrors-doc               x1
+   pc-ilmiocomputer0206                     x6
+   pc-karmaflow-doc                         x17
+   pc-kingsofthebeach-doc                   x4
+   pc-residentevil-doc                      x2
+   pc-rpgmakermv-doc                        x1
+   pc-wizardry-doc                          x3
+   pc-zerocomico-doc                        x1
+   vis-racetheclock-doc                     x1
+   -> excluded from the crossings below.
+
+========================================================================
+THE RATE AS A FUNCTION OF MINIMUM FILE LENGTH
+
+A crossing is a claim that two objects share a file. On a tree whose
+files are short, it is also a claim that two short byte strings
+happened to be equal, and those are not the same claim. This table is
+printed BEFORE any figure is quoted, and the figure quoted anywhere
+else has to name the threshold it was taken at.
+
+   min bytes    my hashes    crossings         rate
+           0           26            0      0.0000 %
+           1           26            0      0.0000 %
+           4           26            0      0.0000 %
+           8           26            0      0.0000 %
+          16           26            0      0.0000 %
+          32           26            0      0.0000 %
+          64           26            0      0.0000 %
+         128           25            0      0.0000 %
+         256           25            0      0.0000 %
+        1024           25            0      0.0000 %
+        4096           25            0      0.0000 %
+       65536            0            0      0.0000 %
+
+========================================================================
+CROSSINGS at a minimum length of 0 bytes: 0 of my 26 distinct hashes appear in another repository
+   (threshold 0 -- every hash, including files too short to be anybody's)
+

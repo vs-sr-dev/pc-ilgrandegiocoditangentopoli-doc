@@ -1,0 +1,50 @@
+root      : iggdt
+signature : 50 58  (2 bytes)   PX
+
+files searched                       : 26
+files BEGINNING with the signature   : 23 of 26
+   RESOURCE.FV1
+   RESOURCE.FV2
+   RESOURCE.FV3
+   RESOURCE.FV4
+   RESOURCE.FV5
+   RESOURCE.FV6
+   RESOURCE.FV7
+   RESOURCE.FV8
+   RESOURCE.FV9
+   RESOURCE.FVA
+   RESOURCE.FVB
+   RESOURCE.FVC
+   RESOURCE.FVD
+   RESOURCE.FVE
+   RESOURCE.FVF
+   RESOURCE.FVG
+   RESOURCE.FVH
+   RESOURCE.FVI
+   RESOURCE.FVJ
+   RESOURCE.FVK
+occurrences ANYWHERE                 : 23, in 23 files
+   RESOURCE.FV1                                             1
+   RESOURCE.FV2                                             1
+   RESOURCE.FV3                                             1
+   RESOURCE.FV4                                             1
+   RESOURCE.FV5                                             1
+   RESOURCE.FV6                                             1
+   RESOURCE.FV7                                             1
+   RESOURCE.FV8                                             1
+   RESOURCE.FV9                                             1
+   RESOURCE.FVA                                             1
+   RESOURCE.FVB                                             1
+   RESOURCE.FVC                                             1
+   RESOURCE.FVD                                             1
+   RESOURCE.FVE                                             1
+   RESOURCE.FVF                                             1
+   RESOURCE.FVG                                             1
+   RESOURCE.FVH                                             1
+   RESOURCE.FVI                                             1
+   RESOURCE.FVJ                                             1
+   RESOURCE.FVK                                             1
+
+A signature that begins no file and appears inside many is not a
+near miss.  It is a coincidence, and the two counts are printed
+apart so that neither can be quoted as the other.

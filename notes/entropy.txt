@@ -1,0 +1,4 @@
+usage: entropy.py [-h] [--block BLOCK] [--threshold THRESHOLD] [--tree]
+                  [--by-ext]
+                  path
+entropy.py: error: iggdt is a directory. This tool measures one file unless you pass --tree, which walks every file under a root and reports per extension. Re-run with --tree.

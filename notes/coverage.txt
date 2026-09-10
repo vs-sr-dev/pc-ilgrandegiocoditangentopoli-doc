@@ -1,0 +1,20 @@
+denominator : 26 files, 461317 bytes -- every file under iggdt, classified BY MAGIC
+
+  bucket      files        bytes      share  format
+  specified       1        43445    9.4176 %  PE / MZ executable (Microsoft)
+  specified       1         4814    1.0435 %  plain text, ASCII
+  decoded        23       412954   89.5163 %  PX 320x200 screen -- no specification, no vendor, no named producer; read on this object
+  opaque          1          104    0.0225 %  not identified by any signature this tool knows
+
+  specified     2 files        48259 bytes    10.4611 % of 461317
+  decoded      23 files       412954 bytes    89.5163 % of 461317
+  derived       0 files            0 bytes     0.0000 % of 461317
+  opaque        1 files          104 bytes     0.0225 % of 461317
+  SUM          26 files       461317 bytes   100.0000 %
+  against the denominator 461317          RESIDUE 0
+
+  The SUM row is an ACCOUNTING figure and not a coverage figure.
+  It answers 'do the bytes add up to the object'. It does not
+  answer 'how much of this can be checked against something outside
+  it', because SPECIFIED and DECODED carry warrants of different
+  strength and DERIVED carries none but this session's.

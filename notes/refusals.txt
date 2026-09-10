@@ -1,0 +1,196 @@
+92 readers, pointed at an object none of them was written
+for. The column that matters is the last one.
+
+agp.py           REFUSED  agp.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, census, extr
+                          for: the .agp archive of Heretic Kingdoms
+kultaccount.py   exit 0               2 of 26 files = 7.6923 %
+                          for: the accounting of Kult
+kultdat.py       REFUSED  kultdat.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, members,
+                          for: Kult's .dat
+kultdia.py       REFUSED  kultdia.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, text, ce
+                          for: Kult's dialogue
+kultexe.py       REFUSED  kultexe.py: error: argument cmd: invalid choice: 'iggdt' (choose from commands, vocab, f
+                          for: Kult's executable
+kultidx.py       REFUSED  kultidx.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, list, ce
+                          for: Kult's .idx
+kultlang.py      REFUSED  kultlang.py: error: argument cmd: invalid choice: 'iggdt' (choose from census, diff, sel
+                          for: Kult's language tables
+kultnames.py     REFUSED  kultnames.py: error: argument cmd: invalid choice: 'iggdt' (choose from census, models, 
+                          for: Kult's internal names
+maska.py         REFUSED  maska.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, show, cens
+                          for: Kult's mask grids
+oggmeta.py       REFUSED  oggmeta.py: error: argument cmd: invalid choice: 'iggdt' (choose from show, census, date
+                          for: Ogg Vorbis session metadata
+sdb.py           REFUSED  sdb.py: error: argument cmd: invalid choice: 'iggdt' (choose from dump, strings, selftes
+                          for: Kult's .sdb
+bkf.py           REFUSED  bkf.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, census, extr
+                          for: Delphine's .BKF archive -- DANGEROUS: a u32 count then fixed-width records
+lez.py           REFUSED  lez.py: error: argument cmd: invalid choice: 'iggdt' (choose from validate, census, extr
+                          for: Delphine's LEZ1 compression
+buildorder.py    REFUSED  REFUSED: no .BKF under iggdt -- refusing an empty population
+                          for: the build order of Moto Racer's binaries
+mraccount.py     REFUSED  mraccount.py: error: the following arguments are required: members
+                          for: Moto Racer's accounting -- DANGEROUS: a hard-coded bucket list
+peimpexp.py      REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/Binaries/Win64/KFGame.exe
+                          for: PE import and export directories (taught PE32+ this session)
+utf16sift.py     exit 0   hits that only a UTF-16 pass finds : 0
+                          for: UTF-16LE personal-data patterns
+tpsave.py        REFUSED  (no output)
+                          for: Theme Park's save files
+tptab.py         REFUSED  unknown command 'iggdt'
+                          for: Theme Park's tables
+gogmanifest.py   REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt\\goggame-galaxyFileList.i
+                          for: GOG's galaxy file list
+hashdb.py        REFUSED  not a ZIP: iggdt
+                          for: GOG's .hashdb checksum table
+authenticode.py  REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/Binaries/Win64/KFGame.exe
+                          for: the PKCS#7 blob of a signed PE
+lzo1x.py         REFUSED  lzo1x.py: error: unrecognized arguments: iggdt
+                          for: LZO1X decompression for UE3 packages
+kfpkg.py         REFUSED  kfpkg.py: error: unrecognized arguments: iggdt
+                          for: the Unreal package of Karmaflow -- DANGEROUS: it also looks for a length-prefixed table
+tfc.py           REFUSED  tfc.py: error: unrecognized arguments: iggdt
+                          for: a UE3 texture file cache
+tfcref.py        REFUSED  tfcref.py: error: unrecognized arguments: iggdt
+                          for: the mip offsets that reference a .tfc
+wwise.py         REFUSED  wwise.py: error: unrecognized arguments: iggdt
+                          for: Wwise .bnk soundbanks
+steamacf.py      exit 0     --check
+                          for: a Steam appmanifest .acf
+kfaudio.py       REFUSED  kfaudio.py: error: unrecognized arguments: iggdt
+                          for: Karmaflow's .wem and .wav
+kftext.py        REFUSED  kftext.py: error: unrecognized arguments: iggdt
+                          for: Karmaflow's localisation tables
+kfopera.py       REFUSED  kfopera.py: error: unrecognized arguments: iggdt
+                          for: Karmaflow's map names against a tracklist
+kfaccount.py     exit 0     --author
+                          for: Karmaflow's accounting -- DANGEROUS: a bucket list that assumes extensions
+pdbpaths.py      exit 0   drive letters : {}
+                          for: CodeView RSDS build paths
+buildroot.py     REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt\\Binaries\\Win64\\KFGame.
+                          for: the studio build root of a native binary
+nrbf.py          REFUSED  PermissionError: [Errno 13] Permission denied: 'iggdt'
+                          for: an MS-NRBF .NET remoting stream
+jstore.py        REFUSED  PermissionError: [Errno 13] Permission denied: 'iggdt'
+                          for: Academagia's Storage index -- DANGEROUS: it looks for a marker, a u32 count and fixed-width records, which is the shape of @UTF and of AFS2
+clrmeta.py       exit 0   runtime versions : {}
+                          for: CLR metadata heaps -- expected NOT to refuse
+jsdata.py        REFUSED  PermissionError: [Errno 13] Permission denied: 'iggdt'
+                          for: Academagia's data.bin record stream
+acaccount.py     REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt\\OfficialContent\\header.
+                          for: Academagia's accounting -- DANGEROUS: its bucket rules name that object's directories
+unityfs.py       exit 0     START.EXE                                                       43445
+                          for: Unity SerializedFile v21 -- DANGEROUS: it runs on v15 and reports nineteen terabytes
+unityarc.py      exit 0   26 archives: 0 pass, 0 fail, 26 refused
+                          for: UnityFS archives; this object has UnityWeb
+unityasset.py    exit 0   FAIL RESOURCE.FV3: iggdt\RESOURCE.FV3: magic is b'PX@\x01\xc8\x00\xf7\xff', not b'UnityF
+                          for: type-tree deserialisation of UnityFS nodes
+bundlebudget.py  REFUSED  unityarc.ArchiveError: iggdt\RESOURCE.FV7: magic is b'PX@\x01\xc8\x00\xf7\xff', not b'Un
+                          for: UnityFS block compression flags
+sfv15.py         exit 0   negative class IDs: 0  (a v15 reader cannot produce one: the class comes from a u16)
+                          for: Unity SerializedFile v15
+unityweb.py      exit 0   directories         : 0
+                          for: UnityWeb LZMA bundles
+criutf.py        exit 0   payload magic     : {}
+                          for: CRIWARE @UTF tables
+crihca.py        exit 0   comp parameter sets: 0 distinct
+                          for: CRI HCA audio frames
+luac52.py        exit 0   opcodes used : 0 of the 40 Lua 5.2 defines
+                          for: compiled Lua 5.2
+placement.py     REFUSED  placement.py: error: argument mode: invalid choice: 'iggdt' (choose from selftest, list,
+                          for: Unity scene placement records
+unitytex.py      exit 0   TOTAL            0              0
+                          for: Unity Texture2D decoding
+isaccount.py     REFUSED  VERDICT                     : DOES NOT CLOSE
+                          for: I am Setsuna's accounting -- DANGEROUS: its bucket rules name that object's directories
+verres.py        exit 0   with no version resource at all: 0
+                          for: PE version resources -- expected NOT to refuse, and it does not, but it counts NE files as PE
+sigcount.py      exit 0   apart so that neither can be quoted as the other.
+                          for: a byte signature given on the command line -- expected NOT to refuse
+isz.py           REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/setup.exe.dat'
+                          for: an InstallShield 3 Z archive -- must refuse on magic in 4 bytes
+ispkg.py         REFUSED  ispkg.py: error: argument cmd: invalid choice: 'iggdt/setup.exe.dat' (choose from walk, 
+                          for: an InstallShield .PKG manifest
+is32.py          REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/setup.exe.dat'
+                          for: an InstallShield _INST32I container
+cptext.py        REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/unlha32.txt'
+                          for: a codepage census of a text file -- expected NOT to refuse
+runexpect.py     REFUSED  runexpect: no such file: iggdt/(no .chm in this tree)
+                          for: printable runs against chance -- expected NOT to refuse
+redact.py        exit 0   21 checks, 0 failures
+                          for: address redaction -- expected NOT to refuse
+zaccount.py      exit 0   4 checks, 0 failures
+                          for: a four-layer accounting; needs an extracted member directory, so its selftest is what the harness can point at
+zipdir.py        REFUSED  FileNotFoundError: [WinError 2] Impossibile trovare il file specificato: 'iggdt/(no file
+                          for: a ZIP central directory, read without extracting
+coverage.py      exit 0     strength and DERIVED carries none but this session's.
+                          for: the four-bucket coverage table -- written here, must NOT refuse
+itsf.py          REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/(no .chm in this tree)'
+                          for: a Microsoft ITSF container -- written here, must NOT refuse
+lcf.py           REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/(no .ldb in this tree)'
+                          for: an LCF database -- written here, must NOT refuse
+pngcensus.py     REFUSED  pngcensus: no .png under 'iggdt' -- refusing to report a clean census over an empty popu
+                          for: a PNG census -- written here, must NOT refuse
+smfcensus.py     REFUSED  smfcensus: no .mid under 'iggdt' -- refusing to report a clean census over an empty popu
+                          for: a Standard MIDI census -- written here, must NOT refuse
+peembed.py       REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/setup.exe.dat'
+                          for: a PE closed on its own sections -- written here, must NOT refuse
+lcfmap.py        REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/(no .lmu in this tree)'
+                          for: an LCF map unit -- written here, must NOT refuse
+lcfdiff.py       REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/(no .ldb in this tree)'
+                          for: two LCF databases compared -- written here, must NOT refuse
+psd.py           REFUSED  FileNotFoundError: [Errno 2] No such file or directory: 'iggdt/(no .psd in this tree)'
+                          for: an Adobe Photoshop file -- written here, must NOT refuse
+pngchunk.py      exit 0   occurrences of tIME : 0
+                          for: a named PNG chunk -- written here, must NOT refuse
+stampcheck.py    REFUSED  stampcheck: no PE files under iggdt -- refusing to report a clean sheet over nothing
+                          for: three tests on a COFF timestamp -- written here, must NOT refuse
+uuidscan.py      exit 0   version-1 UUIDs : 0
+                          for: version-1 UUIDs -- written here, must NOT refuse
+vendorhash.py    REFUSED  vendorhash: no third-party marker found under iggdt -- refusing to publish an empty list
+                          for: third-party components -- written here, must NOT refuse
+projdiff.py      exit 0      0 files
+                          for: a project against a resource library -- written here
+toolsdiff.py     REFUSED  toolsdiff: no .py files in iggdt -- refusing to report an empty comparison as agreement
+                          for: two tool boxes compared; a tree of data is not one, so it must refuse ON READING and not on its command line
+marshal48.py     REFUSED  marshal48: no such file or directory: iggdt/(no file of that magic in this tree)
+                          for: a Ruby Marshal 4.8 document -- written here, must NOT refuse
+rxscripts.py     REFUSED  rxscripts: no such file: iggdt/(no scripts.rxdata in this tree)
+                          for: RPG Maker XP's Scripts.rxdata -- written here; this object ships NO scripts file of any name, so its refusal is the harness working
+rgssdb.py        REFUSED  rgssdb: iggdt/(no file of that magic in this tree) is not a directory of Marshal documen
+                          for: the Table and Color payloads Marshal cannot see -- written here
+chmx.py          REFUSED  chmx: no such file: iggdt/(no .chm in this tree)
+                          for: an ITSF container's LZX content -- written here, must NOT refuse
+lzx.py           exit 0   20 checks, 0 failures
+                          for: Microsoft LZX -- a library; its selftest must NOT refuse
+depotsplit.py    exit 0     the groups cover the tree : True   residue 0 files, 0 bytes
+                          for: a shop's depot boundary against a directory boundary -- written here
+namescan.py      exit 0     Enterbrain : 0 file(s) carry it in one form or the other
+                          for: a literal name in both encodings -- written here, must NOT refuse
+rgssjoin.py      exit 0   11 checks, 0 failures
+                          for: the data-against-help join -- needs two roots, so its selftest is what the harness can point at
+rule0hook.py     exit 0   ALLOW : python tools/x.py
+                          for: rule 0 as a program -- an ALLOWED command must exit 0
+refusals.py      exit 0   refusals.py: harness check, and this child does not recurse
+                          for: itself; pointed here to prove the harness runs
+mp4box.py        REFUSED  mp4box: no such file: iggdt/(no file of that magic in this tree)
+                          for: an ISO base media box tree -- written here, must NOT refuse
+chpak.py         REFUSED  chpak: no such file: iggdt/(no file of that magic in this tree)
+                          for: a Chromium .pak index -- written here, must NOT refuse
+audiopair.py     REFUSED  oggcensus: no .ogg under 'iggdt' -- refusing to report a clean table over an empty popul
+                          for: the same recording in two containers -- written here, must NOT refuse
+jsondiff.py      exit 0   15 checks, 0 failures
+                          for: two directories of JSON joined by key -- needs two roots, so its selftest is what the harness can point at
+regcheck.py      exit 0   20 checks, 0 failures
+                          for: P20's register-membership test -- it reads a document this session writes, so its selftest is what the harness can point at
+predmeasure.py   exit 0   13 checks, 0 failures
+                          for: P21's measurement count -- the same
+
+readers pointed        : 92
+refused with a non-zero exit : 60
+exited 0 anyway              : 32
+absent from the box          : 0
+
+An `exit 0` here is not a success. It means the tool found
+something it was willing to print a table about, and each one has
+to be looked at by hand -- which is what docs/13 does.

@@ -1,0 +1,34 @@
+  0100  b8 4d 58       mov    ax, 584Dh
+  0103  ba 96 0a       mov    dx, 0A96h
+  0106  05 00 00       add    ax, 0h
+  0109  3b 06 02 00    cmp    ax, [2h]
+  010D  73 1a          jnb    129h
+  010F  2d 20 00       sub    ax, 20h
+  0112  fa             cli
+  0113  8e d0          mov    ss, ax
+  0115  fb             sti
+  0116  2d 25 00       sub    ax, 25h
+  0119  8e c0          mov    es, ax
+  011B  50             push   ax
+  011C  b9 26 01       mov    cx, 126h
+  011F  33 ff          xor    di, di
+  0121  57             push   di
+  0122  be 44 01       mov    si, 144h
+  0125  fc             cld
+  0126  f3             rep
+  0127  a5             movsw
+  0128  cb             retf
+  0129  b4 09          mov    ah, 9h
+  012B  ba 32 01       mov    dx, 132h
+  012E  cd 21          int    21h
+  0130  cd 20          int    20h
+  0132  4d             dec    bp
+
+bytes in range        : 51
+bytes decoded         : 51
+instructions          : 25
+coverage              : 100.0000 %
+STOPPED               : no -- every byte in range decoded
+
+branch targets in range   : 1
+landing on a boundary     : 1 of 1

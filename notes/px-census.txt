@@ -1,0 +1,36 @@
+RESOURCE.FV1       17198 B ->  64778   320x200  residue +0   EGA 16/16   palette a935bb67aa28  indices  63
+RESOURCE.FV2       29245 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  81
+RESOURCE.FV3       26114 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  38
+RESOURCE.FV4       42828 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  45
+RESOURCE.FV5       43428 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  42
+RESOURCE.FV6        9440 B ->  64778   320x200  residue +0   EGA 16/16   palette 76b4bdadc8f9  indices   4
+RESOURCE.FV7       11415 B ->  64778   320x200  residue +0   EGA 16/16   palette 76b4bdadc8f9  indices  28
+RESOURCE.FV8        9583 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  16
+RESOURCE.FV9        9508 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices   3
+RESOURCE.FVA        9342 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  18
+RESOURCE.FVB        6772 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices   3
+RESOURCE.FVC        8218 B ->  64778   320x200  residue +0   EGA 16/16   palette 76b4bdadc8f9  indices   4
+RESOURCE.FVD       13073 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  68
+RESOURCE.FVE       12844 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  32
+RESOURCE.FVF        5620 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  37
+RESOURCE.FVG       30019 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  55
+RESOURCE.FVH       38976 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  34
+RESOURCE.FVI       10626 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  19
+RESOURCE.FVJ       15872 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  32
+RESOURCE.FVK        7080 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  31
+RESOURCE.FVL       19414 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  40
+RESOURCE.FVM       17291 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  30
+RESOURCE.FVN       19048 B ->  64778   320x200  residue +0   EGA 16/16   palette 641be8e1d158  indices  14
+
+opened                                   : 23 of 23
+decoded with residue 0                   : 23 of 23
+palette is the canonical EGA 16, in order: 23 of 23
+palette is six-bit throughout            : 23 of 23
+geometry   : 320x200 x23
+residues   : +0 x23
+preambles  : 1 distinct
+             f7 00 00 00 00 00 40 01 c8 00  x23   as words [247, 0, 0, 320, 200]
+palettes   : 3 distinct
+             641be8e1d158  x19
+             76b4bdadc8f9  x3
+             a935bb67aa28  x1

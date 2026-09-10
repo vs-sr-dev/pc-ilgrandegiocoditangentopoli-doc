@@ -1,0 +1,8 @@
+mine   : tools
+theirs : ../pc-rpgmakermv-doc/tools
+
+mine   : 572 .py     theirs : 568 .py
+only mine   : dosdis.py, dospack.py, px.py, tngscore.py
+only theirs : none
+common      : 568    differing   : 1
+   DIFFERS  coverage.py              mine 0732a04ac592  theirs 56ef463fcaec

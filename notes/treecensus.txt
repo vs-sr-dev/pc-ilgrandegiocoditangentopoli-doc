@@ -1,0 +1,41 @@
+root            : iggdt
+files           : 26
+directories     : 0
+bytes           : 461317
+
+year of the directory record:
+  year    files          bytes
+  1996       26         461317
+
+extensions:
+  ext         files          bytes
+  .tng            1            104
+  .bat            1           4814
+  .fv1            1          17198
+  .fv2            1          29245
+  .fv3            1          26114
+  .fv4            1          42828
+  .fv5            1          43428
+  .fv6            1           9440
+  .fv7            1          11415
+  .fv8            1           9583
+  .fv9            1           9508
+  .fva            1           9342
+  .fvb            1           6772
+  .fvc            1           8218
+  .fvd            1          13073
+  .fve            1          12844
+  .fvf            1           5620
+  .fvg            1          30019
+  .fvh            1          38976
+  .fvi            1          10626
+  .fvj            1          15872
+  .fvk            1           7080
+  .fvl            1          19414
+  .fvm            1          17291
+  .fvn            1          19048
+  .exe            1          43445
+
+top-level entries:
+  name            files          bytes     pct
+  (root)             26         461317 100.00%

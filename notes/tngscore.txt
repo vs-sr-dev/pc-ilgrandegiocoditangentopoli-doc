@@ -1,0 +1,28 @@
+file            : HIGHSCOR.TNG
+bytes           : 104 = 4 records of 26 = 6 score + 20 name
+distinct values : 15   commonest [(218, 50), (254, 24), (177, 4)]
+
+STAGE 1  structure      : 512 keys tried, 6 survive
+             xor 0xFE  xor 0xFF  sub 0x00  sub 0x01  sub 0xFE  sub 0xFF
+STAGE 2  score is zero  : 2 of those 6 survive
+             xor 0xFE  sub 0xFE
+
+what the survivors of stage 2 read out:
+  xor  0xFE  filler $    ROBERTO      GUGLIELMO    TIMOTHY      MICHELE   
+  sub  0xFE  filler $    RMBCRTM      ESELGCLKM    TGKMTHW      KGAHCLC   
+
+STAGE 3  corroboration  : against 4 name(s) stated elsewhere in the object
+  xor  0xFE  3 of 4 exact   not matched: TIMOTHY
+  sub  0xFE  0 of 4 exact   not matched: RMBCRTM, ESELGCLKM, TGKMTHW, KGAHCLC
+
+THE KEY         : xor 0xFE
+    it differs from x ^ 0xFF, the pre-briefing's reading, in 1 bit(s)
+
+  rec  score                name         field
+  1    00 00 00 00 00 00    ROBERTO      7 letters + 13 x '$'
+  2    00 00 00 00 00 00    GUGLIELMO    9 letters + 11 x '$'
+  3    00 00 00 00 00 00    TIMOTHY      7 letters + 13 x '$'
+  4    00 00 00 00 00 00    MICHELE      7 letters + 13 x '$'
+
+distinct scores : 1
+distinct fillers: $

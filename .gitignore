@@ -1,0 +1,8 @@
+iggdt/
+_pre/
+_work/
+prompt.txt
+.claude/
+tools/__pycache__/
+__pycache__/
+*.pyc

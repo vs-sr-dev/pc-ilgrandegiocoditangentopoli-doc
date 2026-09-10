@@ -1,0 +1,4 @@
+=== iggdt/START.EXE ===
+  NOT EXEPACK: entry point 1048672 is outside the file
+
+exepack.py: 0 of 1 inputs are EXEPACK images

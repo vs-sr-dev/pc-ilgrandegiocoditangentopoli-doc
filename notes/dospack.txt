@@ -1,0 +1,79 @@
+file                  : START.EXE
+bytes                 : 43445
+  e_magic    0x5a4d   23117
+  e_cblp     0x01b5     437
+  e_cp       0x0055      85
+  e_crlc     0x0001       1
+  e_cparhdr  0x0006       6
+  e_minalloc 0x4dcf   19919
+  e_maxalloc 0xffff   65535
+  e_ss       0x0a9c    2716
+  e_sp       0x0200     512
+  e_csum     0x0000       0
+  e_ip       0x0100     256
+  e_cs       0xfff0   65520
+  e_lfarlc   0x0052      82
+  e_ovno     0x0000       0
+  header bytes             96
+  image bytes           43445
+  slack after image         0
+  entry file offset        96
+  e_minalloc bytes     318704   (extra memory demanded)
+
+THE RESERVED AREA, 0x1C .. 0x51, 54 bytes
+  "..TANGENTOPOLI - V. 1.0 - (Perche' guardi qua dentro?)"
+  it ends exactly at the relocation table: True
+
+THE ENTRY STUB'S SELF-MOVE
+  words copied            294
+  bytes copied            588
+  source, in DS       0x0144
+  FILE RANGE          164 .. 751
+  that range is 1.3534 % of the file
+
+  signature                needle                     where  anywhere  in place
+  LZEXE 0.90               'LZ09'                     head   -         -
+  LZEXE 0.91               'LZ91'                     head   -         -
+  PKLITE                   'PKLITE'                   any    -         -
+  PKLITE (mixed case)      'PKlite'                   any    -         -
+  PKLITE Copr.             'PKLITE Copr.'             any    -         -
+  Microsoft EXEPACK        'RB'                       tail   -         -
+  EXEPACK error string     'Packed file is corrupt'   any    -         -
+  EXEPACK (the tool)       'EXEPACK'                  any    -         -   (tool-only, not counted)
+  DIET                     'diet'                     any    -         -
+  DIET 1.02                '\xb4J\xbb\xff\xff\xcd!'   any    -         -
+  TINYPROG                 'TINYPROG'                 any    -         -
+  WWPACK                   'WWP'                      any    -         -
+  WWPACK (full)            'WWPACK'                   any    -         -   (tool-only, not counted)
+  PROPACK / RJSX           'RJSX'                     any    -         -
+  PROPACK / RJSW           'RJSW'                     any    -         -
+  UPX                      'UPX!'                     any    -         -
+  UPX banner               'UPX '                     any    -         -
+  aPACK                    'aPACK'                    any    -         -
+  aPLib                    'AP32'                     any    -         -
+  LZPAK                    'LZPAK'                    any    -         -
+  SCRNCH                   'SCRNCH'                   any    -         -
+  COMPACK                  'COMPACK'                  any    -         -
+  AINEXE                   'AINEXE'                   any    -         -
+  CRUNCHER                 'CRUNCHER'                 any    -         -
+  EXE Shield               'ExeShield'                any    -         -
+  PGMPAK                   'PGMPAK'                   any    -         -
+  RELOX                    'RELOX'                    any    -         -
+  SHRINK                   'SHRINK'                   any    -         -
+  TinyProg banner          'Tiny'                     any    -         -
+  LZEXE banner             'LZEXE'                    any    -         -   (tool-only, not counted)
+  Borland copyright        'Borland'                  any    -         -
+  Turbo Pascal runtime     'Runtime error'            any    -         -
+  Microsoft C runtime      'Microsoft C'              any    -         -
+
+signatures in the table       : 33
+  of those, tool-only         : 3   (excluded: a compressor's name is in the compressor, not in its output)
+  countable                   : 30
+  found ANYWHERE              : 0 of 30
+  found IN THE RIGHT PLACE    : 0 of 30
+
+the image after the header    : 43349 bytes
+  entropy, whole image        : 7.8152 bits/byte
+  entropy, last 32 KB         : 7.7905 bits/byte
+  distinct byte values        : 256 of 256
+  commonest                   : [('0xfc', 758), ('0xff', 579), ('0x0', 572), ('0x1', 562)]

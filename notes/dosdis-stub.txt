@@ -1,0 +1,299 @@
+  0000  fd             std
+  0001  8c db          mov    bx, ds
+  0003  53             push   bx
+  0004  83 c3 39       add    bx, 39h
+  0007  03 da          add    bx, dx
+  0009  8c cd          mov    bp, cs
+  000B  8b c2          mov    ax, dx
+  000D  80 e4 0f       and    ah, 0Fh
+  0010  b1 04          mov    cl, 4h
+  0012  8b f2          mov    si, dx
+  0014  d3 e6          shl    si, cl
+  0016  d3 ea          shr    dx, cl
+  0018  fe c6          inc    dh
+  001A  8b ce          mov    cx, si
+  001C  d1 e9          shr    cx, 1
+  001E  4e             dec    si
+  001F  4e             dec    si
+  0020  8b fe          mov    di, si
+  0022  2b e8          sub    bp, ax
+  0024  2b d8          sub    bx, ax
+  0026  8e c5          mov    es, bp
+  0028  8e db          mov    ds, bx
+  002A  f3             rep
+  002B  a5             movsw
+  002C  b8 00 10       mov    ax, 1000h
+  002F  b5 80          mov    ch, 80h
+  0031  fe ce          dec    dh
+  0033  75 ed          jnz    22h
+  0035  fc             cld
+  0036  8e dd          mov    ds, bp
+  0038  07             pop    es
+  0039  06             push   es
+  003A  bf 00 01       mov    di, 100h
+  003D  33 f6          xor    si, si
+  003F  ad             lodsw
+  0040  95             xchg   ax, bp
+  0041  ba 10 00       mov    dx, 10h
+  0044  eb 3a          jmp    80h
+  0046  ad             lodsw
+  0047  95             xchg   ax, bp
+  0048  b2 10          mov    dl, 10h
+  004A  eb 44          jmp    90h
+  004C  ad             lodsw
+  004D  95             xchg   ax, bp
+  004E  b2 10          mov    dl, 10h
+  0050  eb 45          jmp    97h
+  0052  ad             lodsw
+  0053  95             xchg   ax, bp
+  0054  b2 10          mov    dl, 10h
+  0056  eb 4b          jmp    0A3h
+  0058  ad             lodsw
+  0059  95             xchg   ax, bp
+  005A  b2 10          mov    dl, 10h
+  005C  eb 50          jmp    0AEh
+  005E  ad             lodsw
+  005F  95             xchg   ax, bp
+  0060  b2 10          mov    dl, 10h
+  0062  eb 56          jmp    0BAh
+  0064  ad             lodsw
+  0065  95             xchg   ax, bp
+  0066  b2 10          mov    dl, 10h
+  0068  eb 6a          jmp    0D4h
+  006A  ad             lodsw
+  006B  95             xchg   ax, bp
+  006C  b2 10          mov    dl, 10h
+  006E  eb 6b          jmp    0DBh
+  0070  ad             lodsw
+  0071  95             xchg   ax, bp
+  0072  b2 10          mov    dl, 10h
+  0074  eb 6c          jmp    0E2h
+  0076  ad             lodsw
+  0077  95             xchg   ax, bp
+  0078  b2 10          mov    dl, 10h
+  007A  72 0b          jb     87h
+  007C  ac             lodsb
+  007D  32 c2          xor    al, dl
+  007F  aa             stosb
+  0080  d1 ed          shr    bp, 1
+  0082  4a             dec    dx
+  0083  74 f1          jz     76h
+  0085  73 f5          jnb    7Ch
+  0087  33 c9          xor    cx, cx
+  0089  33 db          xor    bx, bx
+  008B  d1 ed          shr    bp, 1
+  008D  4a             dec    dx
+  008E  74 b6          jz     46h
+  0090  d1 d3          rcl    bx, 1
+  0092  d1 ed          shr    bp, 1
+  0094  4a             dec    dx
+  0095  74 b5          jz     4Ch
+  0097  d1 d3          rcl    bx, 1
+  0099  80 fb 02       cmp    bl, 2h
+  009C  73 28          jnb    0C6h
+  009E  d1 ed          shr    bp, 1
+  00A0  4a             dec    dx
+  00A1  74 af          jz     52h
+  00A3  d1 d3          rcl    bx, 1
+  00A5  85 db          test   bx, bx
+  00A7  74 18          jz     0C1h
+  00A9  d1 ed          shr    bp, 1
+  00AB  4a             dec    dx
+  00AC  74 aa          jz     58h
+  00AE  d1 d3          rcl    bx, 1
+  00B0  80 fb 05       cmp    bl, 5h
+  00B3  72 0c          jb     0C1h
+  00B5  d1 ed          shr    bp, 1
+  00B7  4a             dec    dx
+  00B8  74 a4          jz     5Eh
+  00BA  d1 d3          rcl    bx, 1
+  00BC  80 fb 0c       cmp    bl, 0Ch
+  00BF  77 7c          jnbe   13Dh
+  00C1  2e             cs:
+  00C2  8a 9f 0e 02    mov    bl, [bx+20Eh]
+  00C6  87 d9          xchg   cx, bx
+  00C8  33 db          xor    bx, bx
+  00CA  83 f9 02       cmp    cx, 2h
+  00CD  74 2a          jz     0F9h
+  00CF  d1 ed          shr    bp, 1
+  00D1  4a             dec    dx
+  00D2  74 90          jz     64h
+  00D4  72 23          jb     0F9h
+  00D6  d1 ed          shr    bp, 1
+  00D8  4a             dec    dx
+  00D9  74 8f          jz     6Ah
+  00DB  d1 d3          rcl    bx, 1
+  00DD  d1 ed          shr    bp, 1
+  00DF  4a             dec    dx
+  00E0  74 8e          jz     70h
+  00E2  d1 d3          rcl    bx, 1
+  00E4  d1 ed          shr    bp, 1
+  00E6  4a             dec    dx
+  00E7  75 04          jnz    0EDh
+  00E9  ad             lodsw
+  00EA  95             xchg   ax, bp
+  00EB  b2 10          mov    dl, 10h
+  00ED  d1 d3          rcl    bx, 1
+  00EF  80 fb 02       cmp    bl, 2h
+  00F2  73 16          jnb    10Ah
+  00F4  2e             cs:
+  00F5  8a bf 34 02    mov    bh, [bx+234h]
+  00F9  ac             lodsb
+  00FA  8a d8          mov    bl, al
+  00FC  56             push   si
+  00FD  8b f7          mov    si, di
+  00FF  2b f3          sub    si, bx
+  0101  fa             cli
+  0102  f3             rep
+  0103  26             es:
+  0104  a4             movsb
+  0105  fb             sti
+  0106  5e             pop    si
+  0107  e9 76 ff       jmp    80h
+  010A  d1 ed          shr    bp, 1
+  010C  4a             dec    dx
+  010D  75 04          jnz    113h
+  010F  ad             lodsw
+  0110  95             xchg   ax, bp
+  0111  b2 10          mov    dl, 10h
+  0113  d1 d3          rcl    bx, 1
+  0115  80 fb 08       cmp    bl, 8h
+  0118  72 da          jb     0F4h
+  011A  d1 ed          shr    bp, 1
+  011C  4a             dec    dx
+  011D  75 04          jnz    123h
+  011F  ad             lodsw
+  0120  95             xchg   ax, bp
+  0121  b2 10          mov    dl, 10h
+  0123  d1 d3          rcl    bx, 1
+  0125  80 fb 17       cmp    bl, 17h
+  0128  72 ca          jb     0F4h
+  012A  d1 ed          shr    bp, 1
+  012C  4a             dec    dx
+  012D  75 04          jnz    133h
+  012F  ad             lodsw
+  0130  95             xchg   ax, bp
+  0131  b2 10          mov    dl, 10h
+  0133  d1 d3          rcl    bx, 1
+  0135  81 e3 df 00    and    bx, 0DFh
+  0139  86 df          xchg   bh, bl
+  013B  eb bc          jmp    0F9h
+  013D  80 e3 03       and    bl, 3h
+  0140  d1 ed          shr    bp, 1
+  0142  4a             dec    dx
+  0143  75 04          jnz    149h
+  0145  ad             lodsw
+  0146  95             xchg   ax, bp
+  0147  b2 10          mov    dl, 10h
+  0149  d1 d3          rcl    bx, 1
+  014B  80 fb 05       cmp    bl, 5h
+  014E  72 10          jb     160h
+  0150  d1 ed          shr    bp, 1
+  0152  4a             dec    dx
+  0153  75 04          jnz    159h
+  0155  ad             lodsw
+  0156  95             xchg   ax, bp
+  0157  b2 10          mov    dl, 10h
+  0159  d1 d3          rcl    bx, 1
+  015B  80 fb 0c       cmp    bl, 0Ch
+  015E  77 45          jnbe   1A5h
+  0160  2e             cs:
+  0161  8a 8f 19 02    mov    cl, [bx+219h]
+  0165  80 f9 19       cmp    cl, 19h
+  0168  74 03          jz     16Dh
+  016A  e9 5b ff       jmp    0C8h
+  016D  ac             lodsb
+  016E  02 c8          add    cl, al
+  0170  80 d5 00       adc    ch, 0h
+  0173  3c fe          cmp    al, 0FEh
+  0175  73 03          jnb    17Ah
+  0177  e9 4e ff       jmp    0C8h
+  017A  50             push   ax
+  017B  8d 9d 00 e0    lea    bx, [di+0E000h]
+  017F  83 e7 0f       and    di, 0Fh
+  0182  81 c7 00 20    add    di, 2000h
+  0186  b1 04          mov    cl, 4h
+  0188  d3 eb          shr    bx, cl
+  018A  8c c0          mov    ax, es
+  018C  03 c3          add    ax, bx
+  018E  8e c0          mov    es, ax
+  0190  8c d8          mov    ax, ds
+  0192  8b de          mov    bx, si
+  0194  83 e6 0f       and    si, 0Fh
+  0197  d3 eb          shr    bx, cl
+  0199  03 c3          add    ax, bx
+  019B  8e d8          mov    ds, ax
+  019D  58             pop    ax
+  019E  3c ff          cmp    al, 0FFh
+  01A0  74 29          jz     1CBh
+  01A2  e9 db fe       jmp    80h
+  01A5  80 e3 03       and    bl, 3h
+  01A8  d1 ed          shr    bp, 1
+  01AA  4a             dec    dx
+  01AB  75 04          jnz    1B1h
+  01AD  ad             lodsw
+  01AE  95             xchg   ax, bp
+  01AF  b2 10          mov    dl, 10h
+  01B1  d1 d3          rcl    bx, 1
+  01B3  80 fb 05       cmp    bl, 5h
+  01B6  72 0b          jb     1C3h
+  01B8  d1 ed          shr    bp, 1
+  01BA  4a             dec    dx
+  01BB  75 04          jnz    1C1h
+  01BD  ad             lodsw
+  01BE  95             xchg   ax, bp
+  01BF  b2 10          mov    dl, 10h
+  01C1  d1 d3          rcl    bx, 1
+  01C3  2e             cs:
+  01C4  8a 8f 24 02    mov    cl, [bx+224h]
+  01C8  e9 fd fe       jmp    0C8h
+  01CB  5b             pop    bx
+  01CC  8b eb          mov    bp, bx
+  01CE  83 c3 10       add    bx, 10h
+  01D1  8b d3          mov    dx, bx
+  01D3  8e c2          mov    es, dx
+  01D5  ad             lodsw
+  01D6  40             inc    ax
+  01D7  74 12          jz     1EBh
+  01D9  48             dec    ax
+  01DA  74 f7          jz     1D3h
+  01DC  91             xchg   ax, cx
+  01DD  90             nop
+  01DE  ad             lodsw
+  01DF  97             xchg   ax, di
+  01E0  26             es:
+  01E1  01 1d          add    [di], bx
+  01E3  e2 f9          loop   1DEh
+  01E5  81 c2 ff 0f    add    dx, 0FFFh
+  01E9  eb e8          jmp    1D3h
+  01EB  ad             lodsw
+  01EC  03 c3          add    ax, bx
+  01EE  fa             cli
+  01EF  8e d0          mov    ss, ax
+  01F1  ad             lodsw
+  01F2  8b e0          mov    sp, ax
+  01F4  fb             sti
+  01F5  ad             lodsw
+  01F6  03 d8          add    bx, ax
+  01F8  53             push   bx
+  01F9  ad             lodsw
+  01FA  50             push   ax
+  01FB  8e c5          mov    es, bp
+  01FD  8e dd          mov    ds, bp
+  01FF  33 c0          xor    ax, ax
+  0201  8b d8          mov    bx, ax
+  0203  8b c8          mov    cx, ax
+  0205  8b d0          mov    dx, ax
+  0207  8b e8          mov    bp, ax
+  0209  8b f0          mov    si, ax
+  020B  8b f8          mov    di, ax
+  020D  cb             retf
+
+bytes in range        : 526
+bytes decoded         : 526
+instructions          : 290
+coverage              : 100.0000 %
+STOPPED               : no -- every byte in range decoded
+
+branch targets in range   : 54
+landing on a boundary     : 54 of 54

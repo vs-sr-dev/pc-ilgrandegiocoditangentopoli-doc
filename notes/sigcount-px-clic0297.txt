@@ -1,0 +1,30 @@
+root      : ../pc-clic0297-doc
+signature : 50 58  (2 bytes)   PX
+
+files searched                       : 3343
+files BEGINNING with the signature   : 0 of 3343
+occurrences ANYWHERE                 : 20109, in 498 files
+   CLIC.ISO                                                 9951
+   _work/iso/LEADER/CATALOGO/TRYOUT/EF2000.AVI              1456
+   _work/iso/LEADER/CATALOGO/TRYOUT/GULL.MOV                852
+   _work/iso/LEADER/CATALOGO/TRYOUT/CASPER.MOV              493
+   _work/iso/LEADER/CATALOGO/TRYOUT/PRIMA.MOV               427
+   _work/iso/LEADER/CATALOGO/TRYOUT/BOES.MOV                376
+   _work/iso/LEADER/CATALOGO/TRYOUT/MDA.MOV                 360
+   _work/iso/LEADER/CATALOGO/TRYOUT/3DBODY.MOV              345
+   _work/iso/LEADER/CATALOGO/TRYOUT/FREDDA.MOV              315
+   _work/iso/LEADER/CATALOGO/TRYOUT/SIM.MOV                 299
+   _work/iso/LEADER/CATALOGO/TRYOUT/OSCAR.MOV               244
+   _work/iso/LEADER/CATALOGO/TRYOUT/AVIATION.MOV            213
+   _work/iso/LEADER/CATALOGO/TRYOUT/LULU.MOV                198
+   _work/iso/LEADER/CATALOGO/TRYOUT/CEZANNE.MOV             175
+   _work/iso/LEADER/CATALOGO/TRYOUT/GPRIX2.MOV              168
+   _work/iso/LEADER/CATALOGO/TRYOUT/EVOC.MOV                154
+   _work/iso/LEADER/CATALOGO/TRYOUT/TOPGUN.AVI              150
+   _work/iso/LEADER/CATALOGO/TRYOUT/BABAYAGA.MOV            139
+   _work/iso/LEADER/CATALOGO/TRYOUT/MK3.MOV                 113
+   _work/exeonly/VILLE.EXE                                  112
+
+A signature that begins no file and appears inside many is not a
+near miss.  It is a coincidence, and the two counts are printed
+apart so that neither can be quoted as the other.
