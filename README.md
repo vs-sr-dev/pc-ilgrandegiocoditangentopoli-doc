@@ -46,7 +46,7 @@ being opaque.
 | 06 | [The program](docs/06-the-program.md) — forty-three kilobytes nobody signs, and a decision about how far to go in |
 | 07 | [The clocks](docs/07-the-clocks.md) — a file system, a sentence in a picture, and a list of DOS versions |
 | 08 | [Against the collection](docs/08-against-the-collection.md) — zero of twenty-six, and the same two letters twice |
-| 09 | [The box and the corrections](docs/09-the-box-and-the-corrections.md) — four tools, 273 checks, eleven things that were wrong, and one of them was mine |
+| 09 | [The box and the corrections](docs/09-the-box-and-the-corrections.md) — four tools, 273 checks, twelve things that were wrong, and two of them were mine |
 
 **Nine chapters, and the reason is twenty-six files.** The last ten objects
 documented here ran to sixteen, eighteen and nineteen; an object of 461,317

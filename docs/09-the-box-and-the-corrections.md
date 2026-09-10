@@ -1,4 +1,4 @@
-# 09 — The box and the corrections: four tools, 273 checks, eleven things that were wrong, and one of them was mine
+# 09 — The box and the corrections: four tools, 273 checks, twelve things that were wrong, and two of them were mine
 
 *Measure: `python tools/toolsdiff.py ../pc-rpgmakermv-doc/tools
 --expect-differing 1`, in `notes/toolsdiff.txt`; `python tools/toolscan.py`, 572
@@ -247,6 +247,18 @@ and `0136h` is inside the string *Manca memoria*. The repair is one expression;
 the four checks added with it all put padding in front of the branch, and a
 fifth reproduces the object's own case by hand.
 
+**C.12 — this repository under-claimed `De Petris`, and the correction came from
+a reader after publication.** [05](05-the-names.md) went out saying only that
+*the resemblance is there and this page will not do more with it than put the
+two names next to each other*. That was the right discipline applied to the
+wrong category: what stood between `De Petris` and `Di Pietro` was taken for a
+phonetic resemblance, which supports nothing, when it is **regular morphology**
+— vernacular *Di X* against Latin ablative-plural *De Xis*, the same relation
+De Angelis has to Di Angelo and De Martinis to Di Martino. **A checkable fact
+was filed as a vague impression and therefore discarded.** The intent behind the
+choice remains an inference and is now marked as one, separately, which is what
+should have happened in the first place.
+
 ---
 
 ## § 6 — The hunch, scored in a paragraph as instructed
@@ -341,7 +353,11 @@ written for.**
 * the bit assignment of the LZ77 stream, and therefore its 361,680 bytes;
 * the meaning of the `PX` preamble's first three words, and of `FV`;
 * whether this build displays the `DEMO` panel that ships in `RESOURCE.FV2`;
-* whether `Giudice De Petris` is a deliberate near-miss of a real name;
+* whether the authors chose `Giudice De Petris` deliberately. **That it is the
+  Latin form of `Di Pietro` is not a near-miss and is no longer open** —
+  vernacular *Di X* and Latin *De Xis* are one name in two registers, as
+  De Angelis is to Di Angelo ([05](05-the-names.md)). What the authors meant by
+  it is not in the bytes and will not be;
 * three of the four sprite sheets, read as sprite sheets — extents, frame
   counts, hot spots. `FV2` was read in [04](04-the-screens.md) after a player's
   recollection sent somebody looking for one particular sprite, and it gave up

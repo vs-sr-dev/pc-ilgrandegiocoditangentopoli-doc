@@ -25,7 +25,8 @@ there. It is here, at 320 × 200, and it cost a run-length decoder to read.**
 ## What the game is
 
 You are a magistrate. The game names him: **Giudice De Petris**, drawn in blue in
-`RESOURCE.FVD`.
+`RESOURCE.FVD` — which is the Latin form of **Di Pietro**, and
+[05](05-the-names.md) is where that is argued.
 
 The intro is six pages of ruled notepaper with a court seal in the corner, and it
 reads, in order:
@@ -160,8 +161,8 @@ python tools/px.py --render iggdt/RESOURCE.FV2 --out _work/png \
 characters.** Five are one man — black gown over a grey suit, red tie, *tocco*,
 a purple law code under the arm, and in the first frame a raised index finger.
 Two are somebody else: fairer hair, black and a red tie, no gown over a suit and
-no book. Which of them is `Giudice De Petris` — the name painted in blue in
-`RESOURCE.FVD` — is not settled by either sheet, and this page will not guess.
+no book. Which of them is `Giudice De Petris` is not settled by either sheet, and
+this page will not guess.
 
 ```
 python tools/px.py --render iggdt/RESOURCE.FV2 --out _work/png \

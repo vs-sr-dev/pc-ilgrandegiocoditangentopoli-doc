@@ -146,10 +146,64 @@ is its zero, which would be a neat fit for a 1996 Italian DOS game — and nothi
 in 104 bytes tells a `Real` from six zeroed bytes of anything else.
 `tngscore.py` prints *six zero bytes* for that reason.
 
-**And not the judge's name.** The player character is `Giudice De Petris`
-([04](04-the-screens.md)). The best-known magistrate of the Milan investigations
-was Antonio Di Pietro. The resemblance is there and this page will not do more
-with it than put the two names next to each other.
+**And not whether the judge's name was chosen deliberately.** What the name *is*
+has an answer and it is the section below; what the authors meant by it does
+not.
+
+## The fifth name, which is a sixth name in Latin
+
+The player character is `Giudice De Petris`, painted in blue in
+`RESOURCE.FVD` ([04](04-the-screens.md)). The public face of the Milan bribery
+investigations, from February 1992 until he left the magistracy at the end of
+1994, was **Antonio Di Pietro**.
+
+An earlier draft of this page said only that *the resemblance is there* and
+declined to go further, which was right on the evidence it had: a phonetic
+resemblance between two surnames will support almost any conclusion you point it
+at. **But the relation between these two is not phonetic resemblance. It is
+morphology, and it is regular.**
+
+Italian patronymic surnames exist in two registers, the vernacular and the
+Latin of notarial record, and the Latin register forms the family name with the
+ablative plural in `-is`:
+
+| vernacular | Latin |
+|---|---|
+| Di Angelo | **De Angelis** |
+| Di Paolo | **De Paulis** |
+| Di Martino | **De Martinis** |
+| Di Giovanni | **De Iohannis** |
+| **Di Pietro** | **De Petris** |
+
+*Pietro* is *Petrus*; *de Petris* is *of the Petrus family*. Nobody treats
+De Angelis and Di Angelo as different names, and Di Pietro and De Petris stand in
+exactly that relation. **`De Petris` is not a name that sounds like `Di Pietro`.
+It is `Di Pietro`, written the other way.**
+
+That much is checkable and is not an inference. Two things follow that are.
+
+**The inference.** A game about Tangentopoli, published while Tangentopoli was
+still running, gave its magistrate the Latin form of the name of the magistrate
+everyone in the country could picture. That reading is not forced by anything in
+461,317 bytes — `De Petris` is an attested Italian surname in its own right and
+an author could have reached for it innocently — but it is the reading the
+setting makes overwhelmingly likely, and this page now says so instead of
+gesturing at it.
+
+**The motive, which is inference on top of inference and is marked as such.**
+The Latin form is recognisable and deniable at the same time. Anyone reading
+`Giudice De Petris` in 1993 knew who was meant; nobody was putting a serving
+prosecutor's name into a satire about an investigation he was running. **That is
+the same instinct as a signature hidden in fifty-two bytes of header padding** —
+say the thing, and put it where it does not have to be answered for.
+
+**And a note on why this took a reader rather than a tool.** The name was
+searched for and the search came back with `de Pretis` — Agostino Depretis of
+the 1880s, and a Constitutional Court judge appointed in 2014. `Pretis` and
+`Petris` differ by the metathesis of two letters and are unrelated families, and
+that transposition is enough to make a search miss. **The connection was made by
+somebody who read the name aloud instead**, which is not a technique this
+repository has a command for.
 
 ## Why this is the answer to the question in the header
 
