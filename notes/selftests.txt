@@ -2,7 +2,7 @@ Every selftest below was run with PYTHONIOENCODING absent from the
 child environment, not merely unset in this shell.
 
   tool               checks failures  what it is for
-  px.py                  38        0  the PX reader
+  px.py                  52        0  the PX reader
   tngscore.py            20        0  HIGHSCOR.TNG and its key
   dosdis.py              35        0  the strict 8086 disassembler
   dospack.py             21        0  the MZ header and the signature sweep
@@ -11,7 +11,7 @@ child environment, not merely unset in this shell.
   nameguard.py           13        0  the shared name guard
   rule0hook.py           26        0  rule 0, as a program
   pathcheck.py           10        0  rule 6, as a program
-  TOTAL                 273        0
+  TOTAL                 287        0
 
   RUN THIS SESSION AND CARRYING NO SELFTEST AT ALL:
     exepack.py       used as a positional EXEPACK test on START.EXE

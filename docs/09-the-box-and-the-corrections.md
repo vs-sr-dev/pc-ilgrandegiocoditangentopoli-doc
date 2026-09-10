@@ -1,8 +1,8 @@
-# 09 — The box and the corrections: four tools, 273 checks, twelve things that were wrong, and two of them were mine
+# 09 — The box and the corrections: four tools, 287 checks, fourteen things that were wrong, and four of them were mine
 
 *Measure: `python tools/toolsdiff.py ../pc-rpgmakermv-doc/tools
 --expect-differing 1`, in `notes/toolsdiff.txt`; `python tools/toolscan.py`, 572
-files and three positive controls; `notes/selftests.txt`, 273 checks and 0
+files and three positive controls; `notes/selftests.txt`, 287 checks and 0
 failures with `PYTHONIOENCODING` absent; `python tools/dirguard.py --survey
 --tools tools` and `python tools/nameguard.py --survey --tools tools`, in
 `notes/`; `python tools/refusals.py iggdt` and `python tools/refusalclass.py
@@ -71,7 +71,7 @@ confusion that costs more than a longer name — hence `tngscore.py`.
 | tool | checks | what it is for |
 |---|---:|---|
 | `coverage.py` | 101 | +6, for the `PX` magic and its four refusals |
-| `px.py` | 38 | the `PX` reader, the palette, the crop |
+| `px.py` | 52 | the `PX` reader, the palette, the crop, the tricolour census |
 | `dosdis.py` | 35 | a strict 8086 disassembler that stops rather than guesses |
 | `dospack.py` | 21 | the MZ header, the relocator arithmetic, 33 signatures |
 | `tngscore.py` | 20 | `HIGHSCOR.TNG`, and 512 keys narrowed in three stages |
@@ -79,7 +79,7 @@ confusion that costs more than a longer name — hence `tngscore.py`.
 | `nameguard.py` | 13 | the shared name guard |
 | `pathcheck.py` | 10 | rule 6, as a program |
 | `dirguard.py` | 9 | the shared guard |
-| **total** | **273** | **0 failures** |
+| **total** | **287** | **0 failures** |
 
 **Every one of those was run with `PYTHONIOENCODING` deleted from the child's
 environment**, not merely unset in the shell — `notes/selftests.txt` says so on
@@ -258,6 +258,38 @@ De Angelis has to Di Angelo and De Martinis to Di Martino. **A checkable fact
 was filed as a vague impression and therefore discarded.** The intent behind the
 choice remains an inference and is now marked as one, separately, which is what
 should have happened in the first place.
+
+**C.13 — a red cross on a white shield is not an ambulance.** The first reading
+of `RESOURCE.FVD` in [04](04-the-screens.md) called its four walking figures
+*four figures carrying a red cross* and filed them, in a sentence that has been
+cut, as medics. They are carrying the **`scudo crociato`** — the white shield
+with a red cross that was the Democrazia Cristiana's emblem for forty-eight
+years, in a game about the corruption investigations that ended that party.
+**The pixels were described accurately and the object was not recognised**,
+which is a distinct failure from mis-seeing: at seven times magnification the
+shield is unmistakable, and the crop was never taken because the sprite had
+already been given a label that explained it. **A description that satisfies you
+stops you looking**, and this one cost the identification of the largest party
+emblem in the object.
+
+**C.14 — this chapter inferred a projectile and the game throws something
+else.** [04](04-the-screens.md) argued, from a grey-and-white object in a
+magistrate's raised hand and a screen headed `AVVISI DI GARANZIA` a few dozen
+pixels away, that the game throws notices of investigation. **It throws small
+tricolour flags**, per a player, and `px.py --tricolour` now measures that
+those are in **none of the twenty-three screens** — so the projectile is drawn
+in code, and the grey object in the hand is not it.
+
+The inference was labelled as an inference when it was published, and that is
+the only reason this correction is cheap rather than embarrassing. **But the
+label was doing less work than it looked like it was.** The sentence around it
+read *a magistrate in a gown throwing single sheets of paper, on a sheet that
+names the notice of investigation twice, is throwing notices of investigation*,
+which is the grammar of a deduction wearing a disclaimer. **The repair is not a
+stronger disclaimer; it is the measurement that was available and was not
+taken** — the crop at twenty-four times, which shows the held object is grey and
+white with no green and no red in it, and the tricolour census, which is nine
+lines of code and one command.
 
 ---
 

@@ -193,6 +193,56 @@ def to_rgb(palette):
     return bytes(((b & 0x3F) << 2) | ((b & 0x3F) >> 4) for b in palette)
 
 
+def colour_class(rgb):
+    """G, W, R or '.', on eight-bit values, independent of palette index.
+
+    The three classes are deliberately wide. The point is not to identify a
+    colour but to find the ARRANGEMENT green-light-red, and an artist shading
+    a flag in mode 13h will not use pure primaries.
+    """
+    red, green, blue = rgb
+    if green > 90 and red < green - 60 and blue < green - 60:
+        return 'G'
+    if red > 110 and green < red - 60 and blue < red - 60:
+        return 'R'
+    if red > 150 and green > 150 and blue > 150:
+        return 'W'
+    return '.'
+
+
+def tricolour_runs(pixels, palette, width, height, window=12):
+    """Every row position where green, then light, then red occur in order.
+
+    WHY A READER OF AN ITALIAN GAME HAS THIS
+    ----------------------------------------
+    On this object the question "where is the tricolour" is a real question
+    twice over. It found the label on the board that names a political party
+    ([04](docs/04-the-screens.md)) -- and, more usefully, it established an
+    ABSENCE: the small tricolour projectile the game throws is in none of the
+    twenty-three screens. **An absence needs a command more than a presence
+    does**, because a reader cannot check it by looking at a picture.
+
+    The known tricolours in the object -- the two ONORE plaques and the title
+    animation -- are the positive control. A run of this that does not light
+    them up is a broken run, not an empty object.
+    """
+    rgb = to_rgb(palette)
+    table = [colour_class((rgb[i * 3], rgb[i * 3 + 1], rgb[i * 3 + 2]))
+             for i in range(256)]
+    hits = []
+    for y in range(height):
+        row = [table[v] for v in pixels[y * width:(y + 1) * width]]
+        for x, cell in enumerate(row):
+            if cell != 'G':
+                continue
+            segment = row[x:x + window]
+            if 'W' not in segment or 'R' not in segment:
+                continue
+            if 0 < segment.index('W') < segment.index('R'):
+                hits.append((x, y))
+    return hits
+
+
 def crop_zoom(pixels, width, height, box=None, zoom=1):
     """Cut a rectangle out and magnify it by nearest neighbour.
 
@@ -349,6 +399,39 @@ def selftest():
     head2, _p, _q, _r, residue2 = decode(synth[:-1])
     want('one pixel short is residue -1', residue2, -1)
 
+    # -- the colour classes and the tricolour run ---------------------------
+    want('pure green classifies G', colour_class((0, 200, 0)), 'G')
+    want('pure red classifies R', colour_class((200, 0, 0)), 'R')
+    want('white classifies W', colour_class((255, 255, 255)), 'W')
+    want('grey classifies as nothing', colour_class((128, 128, 128)), '.')
+    want('a dark shade of green is still G', colour_class((10, 100, 10)), 'G')
+    want('EGA green at eight bits is G', colour_class(tuple(to_rgb(b'\x00\x2a\x00'))), 'G')
+    want('EGA red at eight bits is R', colour_class(tuple(to_rgb(b'\x2a\x00\x00'))), 'R')
+
+    # A three-pixel flag planted in a 6x1 strip, and the same three pixels in
+    # the wrong order, which must NOT be found.
+    flagpal = bytearray(768)
+    for idx, (r, g, b) in ((1, (0, 63, 0)), (2, (63, 63, 63)), (3, (63, 0, 0))):
+        flagpal[idx * 3], flagpal[idx * 3 + 1], flagpal[idx * 3 + 2] = r, g, b
+    want('a green-white-red run is found',
+         tricolour_runs(bytes([0, 1, 2, 3, 0, 0]), bytes(flagpal), 6, 1),
+         [(1, 0)])
+    want('red-white-green is NOT a hit',
+         tricolour_runs(bytes([0, 3, 2, 1, 0, 0]), bytes(flagpal), 6, 1), [])
+    want('green-red-white is NOT a hit',
+         tricolour_runs(bytes([0, 1, 3, 2, 0, 0]), bytes(flagpal), 6, 1), [])
+    want('green and red with no light between is NOT a hit',
+         tricolour_runs(bytes([0, 1, 3, 0, 0, 0]), bytes(flagpal), 6, 1), [])
+    want('a run wider than the window is NOT a hit',
+         tricolour_runs(bytes([1] + [0] * 20 + [2, 3]), bytes(flagpal), 23, 1,
+                        window=12), [])
+    want('the same run inside the window IS a hit',
+         tricolour_runs(bytes([1] + [0] * 20 + [2, 3]), bytes(flagpal), 23, 1,
+                        window=23), [(0, 0)])
+    want('a second row is found at its own y',
+         tricolour_runs(bytes([0, 0, 0, 0] + [1, 2, 3, 0]), bytes(flagpal),
+                        4, 2), [(0, 1)])
+
     # -- the crop, on a 4x2 grid whose every pixel is distinguishable --------
     grid = bytes([1, 2, 3, 4, 5, 6, 7, 8])
     want('a whole-image crop is the identity',
@@ -396,6 +479,8 @@ def main():
     ap.add_argument('--census', action='store_true')
     ap.add_argument('--render', action='store_true')
     ap.add_argument('--palette-report', action='store_true')
+    ap.add_argument('--tricolour', action='store_true',
+                    help='report green-light-red runs, and where they are')
     ap.add_argument('--out', default=None)
     ap.add_argument('--crop', metavar='X,Y,W,H',
                     help='render only this rectangle of the screen')
@@ -426,7 +511,7 @@ def main():
     if args.render:
         os.makedirs(args.out, exist_ok=True)
 
-    opened = clean = ega = sixbit = 0
+    opened = clean = ega = sixbit = tricolours = 0
     failures = []
     geometry = collections.Counter()
     residues = collections.Counter()
@@ -461,6 +546,14 @@ def main():
                   % (os.path.basename(path), head['bytes'], head['decoded'],
                      head['width'], head['height'], residue, hits, digest,
                      len(set(pixels))))
+
+        if args.tricolour:
+            runs = tricolour_runs(pixels, palette, head['width'],
+                                  head['height'])
+            tricolours += 1 if runs else 0
+            print('%-16s green-light-red runs %4d   %s'
+                  % (os.path.basename(path), len(runs),
+                     runs[:4] if runs else 'none'))
 
         if args.palette_report:
             used = sorted(set(pixels))
@@ -500,6 +593,12 @@ def main():
                                        for kv in sorted(geometry.items())))
     print('residues   : ' + '   '.join('%+d x%d' % kv
                                        for kv in sorted(residues.items())))
+    if args.tricolour:
+        print('screens carrying a green-light-red run : %d of %d'
+              % (tricolours, opened))
+        print('  the two ONORE plaques and the title animation are the')
+        print('  positive control: if they are not in that count, this')
+        print('  measurement is broken and its zeroes mean nothing.')
     print('preambles  : %d distinct' % len(preambles))
     for hexed, count in preambles.most_common():
         words = struct.unpack('<5H', bytes.fromhex(hexed.replace(' ', '')))

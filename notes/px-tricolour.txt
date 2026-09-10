@@ -1,0 +1,40 @@
+RESOURCE.FV1     green-light-red runs   16   [(294, 130), (288, 132), (289, 132), (288, 133)]
+RESOURCE.FV2     green-light-red runs    0   none
+RESOURCE.FV3     green-light-red runs   22   [(114, 15), (115, 15), (117, 15), (118, 15)]
+RESOURCE.FV4     green-light-red runs    0   none
+RESOURCE.FV5     green-light-red runs    0   none
+RESOURCE.FV6     green-light-red runs    0   none
+RESOURCE.FV7     green-light-red runs    0   none
+RESOURCE.FV8     green-light-red runs    0   none
+RESOURCE.FV9     green-light-red runs    0   none
+RESOURCE.FVA     green-light-red runs    0   none
+RESOURCE.FVB     green-light-red runs    0   none
+RESOURCE.FVC     green-light-red runs    0   none
+RESOURCE.FVD     green-light-red runs    0   none
+RESOURCE.FVE     green-light-red runs    0   none
+RESOURCE.FVF     green-light-red runs    0   none
+RESOURCE.FVG     green-light-red runs    0   none
+RESOURCE.FVH     green-light-red runs    0   none
+RESOURCE.FVI     green-light-red runs    0   none
+RESOURCE.FVJ     green-light-red runs    8   [(286, 28), (287, 28), (288, 28), (289, 28)]
+RESOURCE.FVK     green-light-red runs    0   none
+RESOURCE.FVL     green-light-red runs   94   [(286, 28), (287, 28), (288, 28), (289, 28)]
+RESOURCE.FVM     green-light-red runs    0   none
+RESOURCE.FVN     green-light-red runs    0   none
+
+opened                                   : 23 of 23
+decoded with residue 0                   : 23 of 23
+palette is the canonical EGA 16, in order: 23 of 23
+palette is six-bit throughout            : 23 of 23
+geometry   : 320x200 x23
+residues   : +0 x23
+screens carrying a green-light-red run : 4 of 23
+  the two ONORE plaques and the title animation are the
+  positive control: if they are not in that count, this
+  measurement is broken and its zeroes mean nothing.
+preambles  : 1 distinct
+             f7 00 00 00 00 00 40 01 c8 00  x23   as words [247, 0, 0, 320, 200]
+palettes   : 3 distinct
+             641be8e1d158  x19
+             76b4bdadc8f9  x3
+             a935bb67aa28  x1

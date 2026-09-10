@@ -24,7 +24,7 @@ repository because it is testimony and not a measurement.
 | the executable | 43,445 bytes demanding 318,704 more, **0 of 30 packer signatures**, 526 bytes of stub disassembled at 100 % |
 | the high-score table | 104 bytes, key `x ^ 0xFE`, four names, four zero scores |
 | against the collection | **0 crossings of 26**, over 108 repositories |
-| tools | 572 Python files, 4 written here, **273 selftest checks, 0 failures** |
+| tools | 572 Python files, 4 written here, **287 selftest checks, 0 failures** |
 
 **10.4611 % is the lowest figure any object in this collection has started at.**
 It closed at 99.9775 % because twenty-three files of a format with no
@@ -46,7 +46,7 @@ being opaque.
 | 06 | [The program](docs/06-the-program.md) — forty-three kilobytes nobody signs, and a decision about how far to go in |
 | 07 | [The clocks](docs/07-the-clocks.md) — a file system, a sentence in a picture, and a list of DOS versions |
 | 08 | [Against the collection](docs/08-against-the-collection.md) — zero of twenty-six, and the same two letters twice |
-| 09 | [The box and the corrections](docs/09-the-box-and-the-corrections.md) — four tools, 273 checks, twelve things that were wrong, and two of them were mine |
+| 09 | [The box and the corrections](docs/09-the-box-and-the-corrections.md) — four tools, 287 checks, fourteen things that were wrong, and four of them were mine |
 
 **Nine chapters, and the reason is twenty-six files.** The last ten objects
 documented here ran to sixteen, eighteen and nineteen; an object of 461,317

@@ -1,6 +1,6 @@
 # 03 — The format: two letters, one run-length rule, and a residue that was never there
 
-*Measure: `python tools/px.py --selftest`, 38 checks; `python tools/px.py
+*Measure: `python tools/px.py --selftest`, 52 checks; `python tools/px.py
 --validate iggdt/START.EXE`, which must fail; `python tools/px.py --census
 --recurse iggdt --expect 23`, in `notes/px-census.txt`; `python tools/px.py
 --palette-report --recurse iggdt`, in `notes/px-palettes.txt`; `python
