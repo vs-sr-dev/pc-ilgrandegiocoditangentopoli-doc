@@ -342,9 +342,13 @@ written for.**
 * the meaning of the `PX` preamble's first three words, and of `FV`;
 * whether this build displays the `DEMO` panel that ships in `RESOURCE.FV2`;
 * whether `Giudice De Petris` is a deliberate near-miss of a real name;
-* the four sprite sheets, read as sprite sheets — extents, frame counts, hot
-  spots. `FVD` alone holds at least six distinct subjects and nobody has cut it
-  up;
+* three of the four sprite sheets, read as sprite sheets — extents, frame
+  counts, hot spots. `FV2` was read in [04](04-the-screens.md) after a player's
+  recollection sent somebody looking for one particular sprite, and it gave up
+  three animations at once; `FVD` alone holds at least six distinct subjects and
+  nobody has cut it up. **The lesson is not subtle: the sheet that was read is
+  the sheet somebody had a reason to look at**, and the other three are waiting
+  for a reason;
 * `dos-platformnotes-doc`, which exists in this collection and was not consulted;
 * whether *Il grande gioco di Tangentopoli* appears by name on any dated
   distribution anywhere, which is the one measurement that would settle

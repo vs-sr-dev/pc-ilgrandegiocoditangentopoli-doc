@@ -60,6 +60,16 @@ zero everywhere has not been shown to fire at all, and this one fires.
 findable before this session because they were in pixels; they are findable now,
 and the collection has never met them.
 
+**And the search for a route stays open, but the question it was asking is
+half-answered from outside the bytes.** The reason to look on a 1997 cover disc
+was that nothing in this collection showed the game reaching anybody. Something
+outside it does: the owner of this collection played it as a child, and
+remembers the board and the magistrate's hand — both since corroborated against
+the pixels, neither derived from the recollection.
+[04](04-the-screens.md) marks that section as testimony rather than measurement
+and keeps it separate from every count on this page. **The distribution route is
+still unknown. That the game was distributed is no longer an assumption.**
+
 ## The same two letters, twice, and only once a signature
 
 `PX` is two bytes and two bytes turn up by chance. `sigcount.py` prints the two

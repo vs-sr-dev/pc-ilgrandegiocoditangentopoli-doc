@@ -5,6 +5,10 @@
 --render <file> --out _work/png --crop X,Y,W,H --zoom N` for every quotation
 below; the census in `notes/px-census.txt`.*
 
+*And one section of this chapter — **One witness** — is not a measurement and
+says so in its first line. It is the only passage in this repository that is
+not.*
+
 ---
 
 **Twenty-three files decoded, twenty-three pictures written out, and every
@@ -70,7 +74,7 @@ a fever chart**, and the joke is old enough that the game never explains it.
 | file | bytes | idx | what is on it |
 |---|---:|---:|---|
 | `FV1` | 17,198 | 63 | **the board.** A wall with two arched gateways, a road with a dashed centre line, lawns, a lamp post, a bare tree, blue sky between the arches, and the `TANGENTOMETRO` sign with the empty thermometer under it. The only screen with its own palette. |
-| `FV2` | 29,245 | 81 | sprite sheet: ten magistrates in robes and hats, ivy-grown stone wall tiles, stacks of paper, a colour bar, and four panels — `VUOI ABBANDONARE L'INCHIESTA? S/N`, `AVVISO DI GARANZIA`, `DEMO`, `INCHIESTA SULLA MAGISTRATURA` |
+| `FV2` | 29,245 | 81 | sprite sheet, and the busiest one: **five frames of a magistrate throwing a sheet of paper**, seven close-up figures, five frames of a hand pulling a yellow folder out of an archive shelf, ivy-grown stone wall tiles, a brick column, stacks of ruled paper, a colour bar, and four panels — `VUOI ABBANDONARE L'INCHIESTA? S/N`, `AVVISO DI GARANZIA`, `DEMO`, `INCHIESTA SULLA MAGISTRATURA`. See below. |
 | `FV3` | 26,114 | 38 | eight frames of the title animation — a vertical green-white-red column with letters tumbling down it — a `VUOI TORNARE AL DOS? S/N` panel, and **the credits** |
 | `FV4` | 42,828 | 45 | **the title screen.** *il grande gioco di* in gold, `TANGENTOPOLI` in green, white and red, on a blue gradient, under two rows of small gold-and-red figures |
 | `FV5` | 43,428 | 42 | the same screen **without the word** — the frame the animation lands on |
@@ -121,6 +125,90 @@ corruption is running wild.
 was afraid of.** It is 1990s Italian satire compressed into two words on an
 orange panel, and it is drawn rather than printed because in 1996 that was
 cheaper than a font.
+
+## The magistrate's hand
+
+`RESOURCE.FV2` is the sheet the game actually runs on, and three of its animations
+are worth reading frame by frame.
+
+```
+python tools/px.py --render iggdt/RESOURCE.FV2 --out _work/png \
+    --crop 180,0,140,105 --zoom 4
+```
+
+**Five magistrates, and only four of them are holding anything.** A figure in a
+black gown and a black *tocco*: one frame with both arms down and empty hands,
+then four with a **white sheet of paper** in the raised hand, the arm at four
+different heights and to either side. That is a throw cycle with an idle frame,
+drawn once and mirrored by whatever draws it.
+
+**What the white sheet is, said as an inference rather than as a reading.**
+Nothing in the sprite spells it. But `RESOURCE.FVF` is an entire screen given
+over to a board reading `AVVISI DI GARANZIA` — plural — and this same sheet
+carries a panel reading `AVVISO DI GARANZIA` singular, a few dozen pixels from
+the sprite. **A magistrate in a gown throwing single sheets of paper, on a sheet
+that names the notice of investigation twice, is throwing notices of
+investigation.** It is the strongest reading available and it is not a
+measurement, so it is written here as what it is.
+
+```
+python tools/px.py --render iggdt/RESOURCE.FV2 --out _work/png \
+    --crop 0,155,320,45 --zoom 3
+```
+
+**Seven close-up figures in a row along the bottom, and they are two
+characters.** Five are one man — black gown over a grey suit, red tie, *tocco*,
+a purple law code under the arm, and in the first frame a raised index finger.
+Two are somebody else: fairer hair, black and a red tie, no gown over a suit and
+no book. Which of them is `Giudice De Petris` — the name painted in blue in
+`RESOURCE.FVD` — is not settled by either sheet, and this page will not guess.
+
+```
+python tools/px.py --render iggdt/RESOURCE.FV2 --out _work/png \
+    --crop 0,148,150,22 --zoom 9
+```
+
+**And five frames of the archive.** A shelf of white ruled paper, twice; then a
+bespectacled man leans in from the left and draws out a **yellow folder**, and in
+the last frame there is a white burst where something scatters. That is
+`PRATICHE DISINSABBIATE` at sprite scale — the case file coming back out of the
+sand.
+
+## One witness, and he is not a measurement
+
+**Everything else in this repository is a count, and this section is not.** It is
+kept because the object had no witnesses at all and now has one, and because
+mixing the two kinds of evidence silently would be worse than marking the join.
+
+The owner of this collection played this game as a small child, and remembers two
+things about it: that `RESOURCE.FV1` — the wall, the two arched gateways, the
+road with the dashed centre line and the `TANGENTOMETRO` sign — **was the arena**,
+and that there was a hand that threw sheets of paper, or money, around it.
+
+**Both are corroborated by the bytes, and neither was derived from the
+recollection.** `FV1` was identified as the board a day earlier, from a palette
+that no other screen in the object shares and from being the only one that needs
+a sky. The hand was found afterwards, by going to look for it: it is the
+five-frame magistrate above, and the sheet is white, not green — the game's
+banknotes are drawn green in `RESOURCE.FV8`, and this is paper.
+
+Two things follow that the bytes cannot say on their own.
+
+**The game was distributed and it reached a household.**
+[08](08-against-the-collection.md) reports 0 crossings of 26 over 108
+repositories and no trace of the title on either Italian cover disc this
+collection holds, and concludes that the route by which this game reached anybody
+is unknown. It is still unknown. **But it reached somebody**, and that is now a
+fact about the object rather than an assumption.
+
+**And the satire landed on an audience it was not written for.** A child of four
+or five saw a man in a black gown flinging bits of paper across a road and
+found it funny, which is the entire experience available at that age. The bits
+of paper were the *avviso di garanzia* — in 1993 the most recognisable piece of
+stationery in the country, the thing that opened the evening news. **The joke
+worked twice, at two completely different resolutions**, and the second one is
+the reason anybody remembers it well enough to go looking for the files thirty
+years later.
 
 ## What the numbering is not
 

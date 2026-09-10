@@ -7,7 +7,10 @@ that turns out to hold everything the game says — including the names of the
 four people who made it.
 
 Nothing here was executed, installed or emulated. Every figure on every page
-carries the command that produces it again.
+carries the command that produces it again — with one marked exception, a
+section of [04](docs/04-the-screens.md) that records the recollection of
+somebody who played this game as a child, kept separate from every count in the
+repository because it is testimony and not a measurement.
 
 | | |
 |---|---|
