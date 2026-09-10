@@ -29,18 +29,26 @@ then run it.
 ```
 python tools/rule0hook.py --report                     (notes/rule0.txt)
 
-  REFUSED as rule-0 : 3
+  REFUSED as rule-0 : 4
+      heredoc               2
       inline program        1
-      heredoc               1
       in-place edit script  1
 ```
 
-**Three refusals, three different rules, and none of them reached the shell.**
-The heredoc was a deliberate re-test after the hook had been running for a
-while; the `sed -i` was not deliberate at all — it was the habit firing on a
-one-line edit to a scratch file, exactly the habit P16 exists for. The
-denominator grows with every shell call and the numerator does not, so the three
-are the measurement and the total is not.
+**Four refusals, three different rules, and none of them reached the shell.**
+
+The first two were deliberate: an inline program to prove the hook was live
+before a tool was written, and a heredoc to prove it covered heredocs too.
+**The last two were not.** The `sed -i` was the habit firing on a one-line edit
+to a scratch file; the second heredoc was `git commit -F -` with the message
+piped in, at the very end of the session, hours after the hook had been running
+and after this chapter's own section on it had been drafted. **A rule that has
+to be remembered is a rule that is forgotten while you are writing about
+remembering it**, which is P16's whole argument arriving on schedule.
+
+The denominator grows with every shell call and the numerator does not, so the
+four are the measurement and the total — 127 calls at the moment
+`notes/rule0.txt` was last written — is not.
 
 ## § 2 — Four tools written, one modified, 568 inherited
 
